@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_final.css">
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+    rel="stylesheet"
+    />
+    <title>Book Filter System</title>
+</head>
+
+<body>
+    <div class="heading">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" defer></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./filter.js"></script>
+
+    <h1>Books Search And Filter System</h1>
+</div>
+    <div class="showcase"></div>
+    <h3>“If one cannot enjoy reading a book over and over again, there is no use in reading it at all.”
+        ― Oscar Wilde</h3>
+    <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table id="emp-table" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <th col-index = 1>BOOK ID</th>
+            <th col-index = 2>Title
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+
+            <th col-index = 3>Author
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 4>Subject
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            <th col-index = 5>Publish Date
+                <select class="table-filter" onchange="filter_rows()">
+                    <option value="all"></option>
+                </select>
+            </th>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Pride and Prejudice</td>
+                <td>Shivani Sirohi</td>
+                <td>Romance</td>
+                <td>1-1-2001</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Pursuit of Happiness</td>
+                <td>Muskan Yadav</td>
+                <td>Sci-Fi</td>
+                <td>2-1-2001</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>It's Okay to Not Be Okay</td>
+                <td>Yashika</td>
+                <td>Horror</td>
+                <td>3-1-2001</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Avengers</td>
+                <td>Shivani Sirohi</td>
+                <td>Thriller</td>
+                <td>1-1-2001</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Fantastic Beasts</td>
+                <td>Muskan</td>
+                <td>Sci-Fi</td>
+                <td>2-1-2001</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Vampire Diaries</td>
+                <td>Yashika Rathore</td>
+                <td>Horror</td>
+                <td>3-1-2001</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>Fantastic Four</td>
+                <td>Shivani</td>
+                <td>Thriller</td>
+                <td>1-1-2001</td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>What Happened to Monday</td>
+                <td>Muskan</td>
+                <td>Sci-Fi</td>
+                <td>2-1-2001</td>
+            </tr>
+            <tr>
+                <td>301</td>
+                <td>The House of Strange</td>
+                <td>Yashika</td>
+                <td>Horror</td>
+                <td>3-1-2001</td>
+            </tr>
+            <tr>
+                <td>302</td>
+                <td>The Silent Patient</td>
+                <td>Shivani</td>
+                <td>Thriller</td>
+                <td>1-1-2001</td>
+            </tr>
+            <tr>
+                <td>303</td>
+                <td>One Indian Girl</td>
+                <td>Muskan</td>
+                <td>Sci-Fi</td>
+                <td>2-1-2001</td>
+            </tr>
+            <tr>
+                <td>304</td>
+                <td>The Haunting of Hill House</td>
+                <td>Yashika</td>
+                <td>Horror</td>
+                <td>3-1-2001</td>
+            </tr>
+            <tr>
+                <td>401</td>
+                <td>Frankenstein</td>
+                <td>Vansh</td>
+                <td>Horror</td>
+                <td>2-1-2001</td>
+            </tr>
+            <tr>
+                <td>402</td>
+                <td>The Fault in Our Stars</td>
+                <td>Vansh</td>
+                <td>Romance</td>
+                <td>3-2-2002</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <script>
+        window.onload = () => {
+            console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+        };
+        getUniqueValuesFromColumn()
+    </script>
+</div>
+</div>
+</body>
+
+</html>
